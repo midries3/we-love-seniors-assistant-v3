@@ -66,8 +66,8 @@ const Index = () => {
         <section className="bg-white py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">About Us</h2>
-              <p className="text-lg text-gray-600">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">About Us</h2>
+              <p className="text-xl md:text-2xl text-gray-600">
                 At WeLoveToHelpSeniors, we're dedicated to enhancing the lives of seniors through carefully curated product recommendations and helpful guides. Our mission is to make daily tasks easier, more enjoyable, and safer for our senior community.
               </p>
             </div>
