@@ -227,5 +227,4 @@ export const productRecommendations: Record<string, Record<string, ProductRecomm
         affiliateLink: "#"
       }
     }
-  };
 };
