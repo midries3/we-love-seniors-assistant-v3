@@ -33,7 +33,7 @@ const SmartCanes = () => {
 
           <div className="mb-8">
             <h2 className="text-3xl font-semibold mb-6">Take Our Quiz</h2>
-            <ProductQuiz />
+            <ProductQuiz productType="smartCane" />
           </div>
         </div>
       </main>
