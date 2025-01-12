@@ -13,8 +13,10 @@ export const QuizResults = ({ recommendation, onRetake }: QuizResultsProps) => {
 
   useEffect(() => {
     resultsRef.current?.scrollIntoView({ behavior: "smooth" });
-    console.log("Loading image from:", recommendation.imageUrl);
-  }, []);
+    console.log("Attempting to load image from:", recommendation.imageUrl);
+    // Log the full recommendation object to verify all data
+    console.log("Full recommendation:", recommendation);
+  }, [recommendation]);
 
   return (
     <Card className="p-8" ref={resultsRef}>
@@ -34,6 +36,7 @@ export const QuizResults = ({ recommendation, onRetake }: QuizResultsProps) => {
             className="w-full max-w-md mx-auto rounded-lg shadow-lg mb-6 cursor-pointer"
             onError={(e) => {
               console.error("Error loading image:", recommendation.imageUrl);
+              console.error("Falling back to placeholder image");
               e.currentTarget.src = "/placeholder.svg";
             }}
           />
