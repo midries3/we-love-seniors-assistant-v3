@@ -1,5 +1,6 @@
 import { ProductQuiz } from "@/components/products/ProductQuiz";
 import { Card } from "@/components/ui/card";
+import { ProductFooter } from "@/components/layout/ProductFooter";
 
 const AirFryers = () => {
   return (
@@ -26,17 +27,37 @@ const AirFryers = () => {
                 <li>Compact size that won't take up too much counter space</li>
               </ul>
               <p className="mt-6 font-medium text-primary">
-                Ready to find your perfect air fryer? Take our quick quiz below to get a personalized recommendation that matches your needs!
+                Ready to find your perfect air fryer? Take our quick quiz below to get a personalized recommendation!
               </p>
             </div>
           </Card>
 
-          <div className="mb-8">
+          <div className="mb-12">
             <h2 className="text-3xl font-semibold mb-6">Take Our Quiz</h2>
             <ProductQuiz productType="airFryer" />
           </div>
+
+          <Card className="mb-10 p-8">
+            <h2 className="text-3xl font-semibold mb-6">After You Get Your Air Fryer</h2>
+            <div className="space-y-4 text-xl text-gray-600">
+              <p>
+                Once you receive your air fryer, here are some tips to get started:
+              </p>
+              <ul className="list-disc pl-6 space-y-3">
+                <li>Read the manual thoroughly before first use</li>
+                <li>Start with simple recipes like french fries or chicken wings</li>
+                <li>Always preheat your air fryer for best results</li>
+                <li>Don't overcrowd the basket - air needs to circulate</li>
+                <li>Clean after each use to maintain performance</li>
+              </ul>
+              <p className="mt-6">
+                Remember to keep the manual in an easy-to-reach place for quick reference, and don't hesitate to start with the preset programs if your model includes them.
+              </p>
+            </div>
+          </Card>
         </div>
       </main>
+      <ProductFooter />
     </div>
   );
 };
