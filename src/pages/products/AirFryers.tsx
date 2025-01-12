@@ -3,6 +3,7 @@ import { Card } from "@/components/ui/card";
 import { ProductFooter } from "@/components/layout/ProductFooter";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
+import { Check } from "lucide-react";
 
 const AirFryers = () => {
   const quizRef = useRef<HTMLDivElement>(null);
@@ -26,13 +27,19 @@ const AirFryers = () => {
               <p>
                 Air fryers provide independence and freedom for seniors who want to maintain an active lifestyle. Here's why they're an excellent choice:
               </p>
-              <ul className="list-disc pl-6 space-y-3">
-                <li>Enhanced independence and mobility</li>
-                <li>Comfortable and easy to operate</li>
-                <li>Suitable for both indoor and outdoor use</li>
-                <li>Helps maintain an active social life</li>
-                <li>Various models to suit different needs and preferences</li>
-                <li>Safety features for peace of mind</li>
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <Check className="mt-1 text-primary" />
+                  <span>Healthier cooking with less oil while maintaining delicious taste</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="mt-1 text-primary" />
+                  <span>Simple, intuitive controls designed for ease of use</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Check className="mt-1 text-primary" />
+                  <span>Safety features including auto-shutoff and cool-touch exteriors</span>
+                </li>
               </ul>
             </div>
           </Card>
