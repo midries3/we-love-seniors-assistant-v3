@@ -119,7 +119,7 @@ const getRecommendation = (productType: string, answers: string[]): ProductRecom
           "Lightweight design"
         ],
         imageUrl: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
-        affiliateLink: "#"
+        affiliateLink: "https://amzn.to/3DNtmhQ"
       },
       midRange: {
         name: "Ninja AF101 Air Fryer",
@@ -133,7 +133,7 @@ const getRecommendation = (productType: string, answers: string[]): ProductRecom
           "Lightweight and easy to clean"
         ],
         imageUrl: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
-        affiliateLink: "#"
+        affiliateLink: "https://amzn.to/4gOukZz"
       },
       premium: {
         name: "Philips Premium XXL Air Fryer",
@@ -147,7 +147,7 @@ const getRecommendation = (productType: string, answers: string[]): ProductRecom
           "Fat removal technology"
         ],
         imageUrl: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
-        affiliateLink: "#"
+        affiliateLink: "https://amzn.to/428Xi1S"
       }
     },
     mobilityScooter: {
