@@ -6,7 +6,7 @@ export const ProductFooter = () => {
       <div className="container mx-auto px-4">
         <div className="text-center text-gray-600">
           <p className="mb-4">
-            As an Amazon Associate, we earn from qualifying purchases. This means we may receive a commission if you purchase products through our links.
+            (As an Amazon Associate, we earn from qualifying purchases)
           </p>
           <Link to="/privacy-policy" className="text-primary hover:underline">
             Privacy Policy
