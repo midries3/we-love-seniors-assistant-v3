@@ -13,12 +13,11 @@ export const HeroSection = () => {
             Discover products that enhance comfort, safety, and independence in daily life.
           </p>
           <Button asChild className="bg-primary hover:bg-primary/90">
-            <Link to="/products/air-fryers">
-              Explore Products
+            <Link to="/products">
+              Explore All Products
             </Link>
           </Button>
         </div>
       </div>
     </div>
-  );
-};
+  </div>
