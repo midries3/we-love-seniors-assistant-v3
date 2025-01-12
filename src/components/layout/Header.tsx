@@ -13,9 +13,6 @@ export const Header = () => {
           <Link to="/" className="text-gray-600 hover:text-primary transition-colors">
             Home
           </Link>
-          <Link to="/products/air-fryers" className="text-gray-600 hover:text-primary transition-colors">
-            Air Fryers
-          </Link>
           <Link to="/about" className="text-gray-600 hover:text-primary transition-colors">
             About
           </Link>
