@@ -42,7 +42,8 @@ export const ProductQuiz = ({ productType }: ProductQuizProps) => {
 
   return (
     <Card className="p-8">
-      <h3 className="text-2xl font-semibold mb-8">{question.text}</h3>
+      <h3 className="text-2xl font-semibold mb-2">{question.text}</h3>
+      <p className="text-gray-500 mb-6">Pick one option below:</p>
       <div className="space-y-4">
         {question.options.map((option) => (
           <Button

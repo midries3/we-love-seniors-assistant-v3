@@ -38,14 +38,6 @@ const AirFryers = () => {
           </Card>
 
           <div className="text-center mb-12">
-            <Card className="p-8 mb-8">
-              <h3 className="text-2xl font-semibold mb-4">How the Quiz Works</h3>
-              <p className="text-lg text-gray-600 mb-6">
-                1. Answer 3 simple questions about your preferences<br />
-                2. Get a personalized air fryer recommendation<br />
-                3. View detailed features and purchase options
-              </p>
-            </Card>
             <Button 
               size="lg" 
               className="text-2xl py-8 px-16 rounded-xl shadow-lg hover:scale-105 transition-transform"
