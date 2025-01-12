@@ -68,6 +68,12 @@ export const ProductQuiz = () => {
     }
   };
 
+  const handleRetakeQuiz = () => {
+    setCurrentQuestion(0);
+    setAnswers([]);
+    setShowResults(false);
+  };
+
   if (showResults) {
     const recommendation = getRecommendation(answers);
     return (
@@ -100,12 +106,19 @@ export const ProductQuiz = () => {
             </ul>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-8 space-y-4">
             <Button 
               className="w-full md:w-auto text-lg py-6 px-8"
               onClick={() => window.open(recommendation.affiliateLink, '_blank')}
             >
               Check Price & Availability
+            </Button>
+            <Button
+              variant="outline"
+              className="w-full md:w-auto text-lg py-6 px-8"
+              onClick={handleRetakeQuiz}
+            >
+              Retake Quiz
             </Button>
           </div>
         </div>
