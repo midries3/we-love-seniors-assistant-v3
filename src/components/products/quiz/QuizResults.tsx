@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ProductRecommendation } from "./ProductRecommendations";
+import { useEffect, useRef } from "react";
 
 interface QuizResultsProps {
   recommendation: ProductRecommendation;
@@ -8,8 +9,14 @@ interface QuizResultsProps {
 }
 
 export const QuizResults = ({ recommendation, onRetake }: QuizResultsProps) => {
+  const resultsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    resultsRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, []);
+
   return (
-    <Card className="p-8">
+    <Card className="p-8" ref={resultsRef}>
       <h3 className="text-3xl font-bold mb-6 text-primary">Your Perfect Match!</h3>
       <div className="space-y-6">
         <h4 className="text-2xl font-semibold">{recommendation.name}</h4>
@@ -32,7 +39,7 @@ export const QuizResults = ({ recommendation, onRetake }: QuizResultsProps) => {
         <div className="bg-secondary p-6 rounded-lg">
           <h5 className="text-xl font-semibold mb-4">Key Features:</h5>
           <ul className="list-disc pl-6 space-y-3">
-            {recommendation.features.map((feature, index) => (
+            {recommendation.features.slice(0, 3).map((feature, index) => (
               <li key={index} className="text-lg text-gray-700">{feature}</li>
             ))}
           </ul>
