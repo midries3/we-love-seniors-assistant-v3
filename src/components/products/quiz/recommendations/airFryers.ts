@@ -26,7 +26,7 @@ export const airFryerRecommendations: ProductCategory = {
       "Clear, easy-to-read digital display",
       "Lightweight and easy to clean"
     ],
-    imageUrl: "/images/products/airfryers/ninja-af101.jpg",
+    imageUrl: "/lovable-uploads/256acd34-43ad-4f08-96ac-a09f6cae2ea4.png",
     affiliateLink: "https://amzn.to/4gOukZz"
   },
   premium: {
@@ -40,7 +40,7 @@ export const airFryerRecommendations: ProductCategory = {
       "Dishwasher safe parts",
       "Fat removal technology"
     ],
-    imageUrl: "/images/products/airfryers/philips-xxl.jpg",
+    imageUrl: "/lovable-uploads/da364eca-b340-43c3-a3d5-1e14a2c30840.png",
     affiliateLink: "https://amzn.to/428Xi1S"
   }
 };
