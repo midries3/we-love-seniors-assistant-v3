@@ -12,8 +12,8 @@ export const smartCaneRecommendations: ProductCategory = {
       "Fall alert",
       "Lightweight design"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d",
-    affiliateLink: "#"
+    imageUrl: "https://m.media-amazon.com/images/I/61Rr8+NBP1L._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/example-link"
   },
   advanced: {
     name: "Step Smart Cane",
@@ -26,8 +26,8 @@ export const smartCaneRecommendations: ProductCategory = {
       "Heart rate monitor",
       "Weather alerts"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d",
-    affiliateLink: "#"
+    imageUrl: "https://m.media-amazon.com/images/I/71+KQr+BPGL._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/example-link"
   },
   premium: {
     name: "CareWalk Pro",
@@ -40,7 +40,7 @@ export const smartCaneRecommendations: ProductCategory = {
       "Family monitoring app",
       "Weather resistance"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d",
-    affiliateLink: "#"
+    imageUrl: "https://m.media-amazon.com/images/I/71dL6xn9PIL._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/example-link"
   }
 };

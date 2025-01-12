@@ -12,8 +12,8 @@ export const pillDispenserRecommendations: ProductCategory = {
       "Clear instructions",
       "Loud alarm"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae",
-    affiliateLink: "#"
+    imageUrl: "https://m.media-amazon.com/images/I/71cVOgvystL._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/example-link"
   },
   advanced: {
     name: "Hero Health Smart Dispenser",
@@ -26,8 +26,8 @@ export const pillDispenserRecommendations: ProductCategory = {
       "Missed dose notifications",
       "Caregiver updates"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae",
-    affiliateLink: "#"
+    imageUrl: "https://m.media-amazon.com/images/I/61vR8bF6VNL._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/example-link"
   },
   premium: {
     name: "MedaCube Pro",
@@ -40,7 +40,7 @@ export const pillDispenserRecommendations: ProductCategory = {
       "Emergency backup power",
       "24/7 support"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae",
-    affiliateLink: "#"
+    imageUrl: "https://m.media-amazon.com/images/I/71QH6rYL5yL._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/example-link"
   }
 };

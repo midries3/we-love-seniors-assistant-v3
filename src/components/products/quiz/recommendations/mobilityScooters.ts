@@ -12,8 +12,8 @@ export const mobilityScooterRecommendations: ProductCategory = {
       "Adjustable seat height",
       "Simple controls"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1576877258326-45ddc8571f80",
-    affiliateLink: "#"
+    imageUrl: "https://m.media-amazon.com/images/I/61vHzipbVpL._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/example-link"
   },
   midRange: {
     name: "Pride Victory 10 4-Wheel",
@@ -26,8 +26,8 @@ export const mobilityScooterRecommendations: ProductCategory = {
       "Storage basket",
       "Delta tiller steering"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1576877258326-45ddc8571f80",
-    affiliateLink: "#"
+    imageUrl: "https://m.media-amazon.com/images/I/71rlXZr3NHL._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/example-link"
   },
   premium: {
     name: "Pride Pursuit XL",
@@ -40,7 +40,7 @@ export const mobilityScooterRecommendations: ProductCategory = {
       "Full lighting package",
       "Large tires"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1576877258326-45ddc8571f80",
-    affiliateLink: "#"
+    imageUrl: "https://m.media-amazon.com/images/I/71J7FYxFJ5L._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/example-link"
   }
 };

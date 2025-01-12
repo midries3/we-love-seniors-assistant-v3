@@ -12,8 +12,8 @@ export const securityCameraRecommendations: ProductCategory = {
       "Easy setup",
       "Mobile app viewing"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1557324232-b8917d3c3dcb",
-    affiliateLink: "#"
+    imageUrl: "https://m.media-amazon.com/images/I/61cUNvWxVNL._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/example-link"
   },
   midRange: {
     name: "Ring Spotlight Cam",
@@ -26,8 +26,8 @@ export const securityCameraRecommendations: ProductCategory = {
       "Night vision",
       "Motion zones"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1557324232-b8917d3c3dcb",
-    affiliateLink: "#"
+    imageUrl: "https://m.media-amazon.com/images/I/51xKl+c2VQL._AC_SL1000_.jpg",
+    affiliateLink: "https://amzn.to/example-link"
   },
   premium: {
     name: "Arlo Pro 4",
@@ -40,7 +40,7 @@ export const securityCameraRecommendations: ProductCategory = {
       "Two-way audio",
       "Weather resistant"
     ],
-    imageUrl: "https://images.unsplash.com/photo-1557324232-b8917d3c3dcb",
-    affiliateLink: "#"
+    imageUrl: "https://m.media-amazon.com/images/I/61Jc9xzUiML._AC_SL1500_.jpg",
+    affiliateLink: "https://amzn.to/example-link"
   }
 };
