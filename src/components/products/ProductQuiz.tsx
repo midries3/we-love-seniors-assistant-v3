@@ -12,7 +12,7 @@ interface ProductRecommendation {
   name: string;
   description: string;
   features: string[];
-  price: string;
+  imageUrl: string;
   affiliateLink: string;
 }
 
@@ -36,18 +36,19 @@ const questions: Question[] = [
 
 const getRecommendation = (answers: string[]): ProductRecommendation => {
   // This is a simplified recommendation logic
-  // You can expand this based on your actual product database
   return {
     name: "Ninja AF101 Air Fryer",
-    description: "Perfect for seniors with easy-to-use controls and compact design",
+    description: "Perfect for seniors with easy-to-use controls and compact design. This model offers the perfect balance of simplicity and functionality.",
     features: [
       "Simple, intuitive controls",
       "Dishwasher-safe parts",
-      "4-quart capacity",
-      "Wide temperature range",
+      "4-quart capacity - perfect for 1-2 people",
+      "Wide temperature range for versatile cooking",
+      "Clear, easy-to-read digital display",
+      "Lightweight and easy to clean"
     ],
-    price: "$99.99",
-    affiliateLink: "#", // Replace with actual affiliate link
+    imageUrl: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+    affiliateLink: "#" // Replace with actual affiliate link
   };
 };
 
@@ -70,23 +71,41 @@ export const ProductQuiz = () => {
   if (showResults) {
     const recommendation = getRecommendation(answers);
     return (
-      <Card className="p-6">
-        <h3 className="text-2xl font-semibold mb-4">Your Perfect Match!</h3>
-        <div className="space-y-4">
-          <h4 className="text-xl font-medium text-primary">{recommendation.name}</h4>
-          <p className="text-gray-600">{recommendation.description}</p>
-          <ul className="list-disc pl-6 space-y-2">
-            {recommendation.features.map((feature, index) => (
-              <li key={index} className="text-gray-600">{feature}</li>
-            ))}
-          </ul>
-          <div className="mt-6 space-y-4">
-            <p className="text-xl font-semibold">Price: {recommendation.price}</p>
+      <Card className="p-8">
+        <h3 className="text-3xl font-bold mb-6 text-primary">Your Perfect Match!</h3>
+        <div className="space-y-6">
+          <h4 className="text-2xl font-semibold">{recommendation.name}</h4>
+          
+          <a 
+            href={recommendation.affiliateLink} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="block hover:opacity-90 transition-opacity"
+          >
+            <img 
+              src={recommendation.imageUrl} 
+              alt={recommendation.name}
+              className="w-full max-w-md mx-auto rounded-lg shadow-lg mb-6 cursor-pointer"
+            />
+          </a>
+
+          <p className="text-xl text-gray-700">{recommendation.description}</p>
+          
+          <div className="bg-secondary p-6 rounded-lg">
+            <h5 className="text-xl font-semibold mb-4">Key Features:</h5>
+            <ul className="list-disc pl-6 space-y-3">
+              {recommendation.features.map((feature, index) => (
+                <li key={index} className="text-lg text-gray-700">{feature}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="mt-8">
             <Button 
-              className="w-full md:w-auto"
+              className="w-full md:w-auto text-lg py-6 px-8"
               onClick={() => window.open(recommendation.affiliateLink, '_blank')}
             >
-              Check Price
+              Check Price & Availability
             </Button>
           </div>
         </div>
@@ -97,15 +116,15 @@ export const ProductQuiz = () => {
   const question = questions[currentQuestion];
 
   return (
-    <Card className="p-6">
-      <h3 className="text-xl font-semibold mb-6">{question.text}</h3>
+    <Card className="p-8">
+      <h3 className="text-2xl font-semibold mb-8">{question.text}</h3>
       <div className="space-y-4">
         {question.options.map((option) => (
           <Button
             key={option}
             onClick={() => handleAnswer(option)}
             variant="outline"
-            className="w-full justify-start text-left hover:bg-secondary"
+            className="w-full justify-start text-left hover:bg-secondary text-lg py-6"
           >
             {option}
           </Button>
