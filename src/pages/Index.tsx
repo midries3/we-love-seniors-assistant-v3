@@ -28,15 +28,33 @@ const Index = () => {
     {
       title: "Best Air Fryers for Seniors",
       description: "Discover the top air fryers that are easy to use and perfect for cooking healthy meals.",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1621317758612-3958e0f07c0f",
       link: "/products/air-fryers",
     },
     {
-      title: "Kitchen Safety Tips",
-      description: "Essential tips to make cooking safer and more enjoyable for seniors.",
-      image: "/placeholder.svg",
-      link: "#",
+      title: "Mobility Scooters Guide",
+      description: "Find the perfect mobility scooter to maintain your independence and active lifestyle.",
+      image: "https://images.unsplash.com/photo-1576877258326-45ddc8571f80",
+      link: "/products/mobility-scooters",
     },
+    {
+      title: "Smart Pill Dispensers",
+      description: "Stay on top of your medication schedule with these innovative smart pill dispensers.",
+      image: "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae",
+      link: "/products/smart-pill-dispensers",
+    },
+    {
+      title: "Smart Walking Canes",
+      description: "Explore walking canes with advanced features for enhanced safety and support.",
+      image: "https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d",
+      link: "/products/smart-canes",
+    },
+    {
+      title: "Home Security Cameras",
+      description: "Keep your home safe with easy-to-use security cameras designed for seniors.",
+      image: "https://images.unsplash.com/photo-1557324232-b8917d3c3dcb",
+      link: "/products/security-cameras",
+    }
   ];
 
   return (
@@ -68,7 +86,7 @@ const Index = () => {
         <section className="bg-secondary py-16">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center mb-12">Product Guides</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {productGuides.map((guide, index) => (
                 <BlogCard key={index} {...guide} />
               ))}
