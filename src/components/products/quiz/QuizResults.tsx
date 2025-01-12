@@ -13,6 +13,7 @@ export const QuizResults = ({ recommendation, onRetake }: QuizResultsProps) => {
 
   useEffect(() => {
     resultsRef.current?.scrollIntoView({ behavior: "smooth" });
+    console.log("Loading image from:", recommendation.imageUrl);
   }, []);
 
   return (
@@ -31,6 +32,10 @@ export const QuizResults = ({ recommendation, onRetake }: QuizResultsProps) => {
             src={recommendation.imageUrl} 
             alt={recommendation.name}
             className="w-full max-w-md mx-auto rounded-lg shadow-lg mb-6 cursor-pointer"
+            onError={(e) => {
+              console.error("Error loading image:", recommendation.imageUrl);
+              e.currentTarget.src = "/placeholder.svg";
+            }}
           />
         </a>
 
