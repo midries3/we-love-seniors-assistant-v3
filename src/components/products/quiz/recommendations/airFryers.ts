@@ -12,7 +12,7 @@ export const airFryerRecommendations: ProductCategory = {
       "Cool-touch housing",
       "Lightweight design"
     ],
-    imageUrl: "https://m.media-amazon.com/images/I/71tKqMZAKtL._AC_SL1500_.jpg",
+    imageUrl: "/images/products/airfryers/dash-compact.jpg",
     affiliateLink: "https://amzn.to/3DNtmhQ"
   },
   midRange: {
@@ -26,7 +26,7 @@ export const airFryerRecommendations: ProductCategory = {
       "Clear, easy-to-read digital display",
       "Lightweight and easy to clean"
     ],
-    imageUrl: "https://m.media-amazon.com/images/I/71+8uTMDRFL._AC_SL1500_.jpg",
+    imageUrl: "/images/products/airfryers/ninja-af101.jpg",
     affiliateLink: "https://amzn.to/4gOukZz"
   },
   premium: {
@@ -40,7 +40,7 @@ export const airFryerRecommendations: ProductCategory = {
       "Dishwasher safe parts",
       "Fat removal technology"
     ],
-    imageUrl: "https://m.media-amazon.com/images/I/71DCZOdq-sL._AC_SL1500_.jpg",
+    imageUrl: "/images/products/airfryers/philips-xxl.jpg",
     affiliateLink: "https://amzn.to/428Xi1S"
   }
 };
