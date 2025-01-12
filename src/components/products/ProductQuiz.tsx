@@ -151,7 +151,7 @@ const getRecommendation = (productType: string, answers: string[]): ProductRecom
       }
     },
     mobilityScooter: {
-      indoor: {
+      basic: {
         name: "Go-Go Ultra X 3-Wheel",
         description: "Compact and maneuverable, perfect for indoor use and tight spaces.",
         features: [
@@ -165,9 +165,9 @@ const getRecommendation = (productType: string, answers: string[]): ProductRecom
         imageUrl: "https://images.unsplash.com/photo-1576877258326-45ddc8571f80",
         affiliateLink: "#"
       },
-      outdoor: {
+      midRange: {
         name: "Pride Victory 10 4-Wheel",
-        description: "Robust outdoor scooter with excellent stability and range.",
+        description: "Perfect balance of features and value.",
         features: [
           "Long range battery",
           "Comfortable high-back seat",
@@ -179,9 +179,9 @@ const getRecommendation = (productType: string, answers: string[]): ProductRecom
         imageUrl: "https://images.unsplash.com/photo-1576877258326-45ddc8571f80",
         affiliateLink: "#"
       },
-      heavy_duty: {
+      premium: {
         name: "Pride Pursuit XL",
-        description: "Heavy-duty scooter for all terrains and conditions.",
+        description: "Premium scooter with advanced features.",
         features: [
           "400 lb weight capacity",
           "Full suspension",
@@ -283,7 +283,7 @@ const getRecommendation = (productType: string, answers: string[]): ProductRecom
       }
     },
     securityCamera: {
-      indoor: {
+      basic: {
         name: "SimpliSafe Indoor Camera",
         description: "Easy-to-use indoor security camera with essential features.",
         features: [
@@ -297,7 +297,7 @@ const getRecommendation = (productType: string, answers: string[]): ProductRecom
         imageUrl: "https://images.unsplash.com/photo-1557324232-b8917d3c3dcb",
         affiliateLink: "#"
       },
-      outdoor: {
+      midRange: {
         name: "Ring Spotlight Cam",
         description: "Weatherproof outdoor camera with built-in lighting.",
         features: [
@@ -328,9 +328,47 @@ const getRecommendation = (productType: string, answers: string[]): ProductRecom
     }
   };
 
-  const category = answers[2] === "Under $50" ? "budget" : 
-                  answers[2] === "$50-$100" ? "midRange" : "premium";
+  // Determine category based on answers
+  let category: string;
   
+  switch(productType) {
+    case 'airFryer':
+      category = answers[2] === "Under $50" ? "budget" : 
+                 answers[2] === "$50-$100" ? "midRange" : "premium";
+      break;
+    case 'mobilityScooter':
+      category = answers[0] === "Indoors only" ? "basic" :
+                 answers[0] === "Outdoors only" ? "midRange" : "premium";
+      break;
+    case 'pillDispenser':
+      category = answers[0] === "1-3 medications" ? "basic" :
+                 answers[0] === "4-6 medications" ? "midRange" : "premium";
+      break;
+    case 'smartCane':
+      category = answers[0] === "Fall detection" ? "basic" :
+                 answers[0] === "GPS tracking" ? "midRange" : "premium";
+      break;
+    case 'securityCamera':
+      category = answers[0] === "Indoor only" ? "basic" :
+                 answers[0] === "Outdoor only" ? "midRange" : "premium";
+      break;
+    default:
+      category = "midRange"; // Default fallback
+  }
+
+  // Ensure we have recommendations for this product type
+  if (!recommendations[productType]) {
+    console.error(`No recommendations found for product type: ${productType}`);
+    return {
+      name: "Product Not Found",
+      description: "We're sorry, but we couldn't find a matching product. Please try again.",
+      features: ["No features available"],
+      imageUrl: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+      affiliateLink: "#"
+    };
+  }
+
+  // Return the recommendation or a fallback
   return recommendations[productType][category] || recommendations[productType].midRange;
 };
 
