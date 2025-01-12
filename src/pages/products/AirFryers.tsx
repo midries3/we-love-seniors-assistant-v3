@@ -4,9 +4,11 @@ import { ProductFooter } from "@/components/layout/ProductFooter";
 import { Button } from "@/components/ui/button";
 import { useRef } from "react";
 import { Check } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const AirFryers = () => {
   const quizRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   const scrollToQuiz = () => {
     quizRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -25,22 +27,24 @@ const AirFryers = () => {
             <h2 className="text-3xl font-semibold mb-6">Why Choose an Air Fryer?</h2>
             <div className="space-y-4 text-xl text-gray-600">
               <p>
-                Air fryers provide independence and freedom for seniors who want to maintain an active lifestyle. Here's why they're an excellent choice:
+                Air fryers provide independence and freedom for seniors who want to maintain an active lifestyle.
               </p>
-              <ul className="space-y-4">
-                <li className="flex items-start gap-3">
-                  <Check className="mt-1 text-primary" />
-                  <span>Healthier cooking with less oil while maintaining delicious taste</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="mt-1 text-primary" />
-                  <span>Simple, intuitive controls designed for ease of use</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Check className="mt-1 text-primary" />
-                  <span>Safety features including auto-shutoff and cool-touch exteriors</span>
-                </li>
-              </ul>
+              {!isMobile && (
+                <ul className="space-y-4">
+                  <li className="flex items-start gap-3">
+                    <Check className="mt-1 text-primary" />
+                    <span>Healthier cooking with less oil while maintaining delicious taste</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="mt-1 text-primary" />
+                    <span>Simple, intuitive controls designed for ease of use</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="mt-1 text-primary" />
+                    <span>Safety features including auto-shutoff and cool-touch exteriors</span>
+                  </li>
+                </ul>
+              )}
             </div>
           </Card>
 
