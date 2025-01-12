@@ -12,7 +12,7 @@ export const airFryerRecommendations: ProductCategory = {
       "Cool-touch housing",
       "Lightweight design"
     ],
-    imageUrl: "/images/products/airfryers/dash-compact.jpg",
+    imageUrl: "/lovable-uploads/8b9d697e-95d3-4ef7-ac8b-1f0908f36e89.png",
     affiliateLink: "https://amzn.to/3DNtmhQ"
   },
   midRange: {
